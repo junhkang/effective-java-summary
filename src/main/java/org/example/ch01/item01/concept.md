@@ -5,7 +5,7 @@
 ## 1\. 정적 팩터리 메서드란?
 
 그렇다면 정적 팩터리 메서드는 무엇일까? 간단히 말해 객체 생성의 역할을 하는 클래스 메서드로, static 메서드를 통해 인스턴스를 생성하는 것이다. 다음은 java의 기본 Boolean 클래스 내 정적 팩토리 메서드의 간단한 예시이다. 
-<p align="center"><img src="../images/image01.png"/></p>
+<p align="center"><img src="./images/image01.png"/></p>
 
 이팩티브 자바에서는 정적 팩토리 메서드를 사용할 시의 5가지 장점과 2가지 단점에 대해 서술하고 있어 자세한 비교를 통해 하나하나 알아보려 한다.
 
@@ -14,13 +14,13 @@
 #### 2-1. 이름을 가질 수 있다.
 
 인스턴스를 대표하는 생성자가 명확하거나, 반환될 객체에 대한 설명이 필요하지 않을 경우에는 크게 느껴지지 않는 차이일 수 있지만, 이름을 가질 수 있어 반환될 객체의 특징을 설명할 수 있다는 것은 굉장한 장점이다. 이펙티브 자바에서는 BigInteger와 BigInteger.probablePrime의 차이를 예로 들고 있다. 먼저 BigInteger(int, int, Random)의 예제를 보면
-<p align="center"><img src="../images/image02.png"/></p>
+<p align="center"><img src="./images/image02.png"/></p>
 
 설명을 읽어보면 "지정된 bitLength의 소수일 가능성이 있는 임의의 BigInteger를 생성한다."는 것을 이해할 수 있지만, 그전에는 명확한 반환될 객체의 특성을 알 수 없다. 또한, 하나의 시그니처로는 생성자를 한 개만 만들 수 있기에 제약이 있다. 예를 들어 동일한 BigInteger(int, int, Random) 생성자는 다른 의미를 가질 수 없다. BigInteger(int, Random, int)와 같이 순서를 바꾸거나, 추가하는 식으로 피해 갈 수는 있지만, 당연히 좋지 않은 방식이다. (추가될 때마다 클래스 설명 문서를 확인해야 하고, 호출하는데 실수가 있을 수 있다.)
 
 그에 비해 자바 4에서 추가된 BigInteger.probablePrime을 보면 
 
-<p align="center"><img src="../images/image03.png"/></p>
+<p align="center"><img src="./images/image03.png"/></p>
 
 "값이 소수인 BigInteger를 반환한다"라는 의미를 이름만으로도 충분히 유추가 가능하다. 따라서 한 클래스에 시그니처 생성자가 여러 개 필요하다면 생성자를 정적 팩토리 메서드로 바꾸고 그 특징을 설명할 수 있는 이름을 붙이자
 
@@ -36,8 +36,8 @@
 
 다음은 java.util.Collections의 동기화 기능의 정적 팩터리 메서드이다.
 
-<p align="center"><img src="../images/image04.png"/></p>
-<p align="center"><img src="../images/image05.png"/></p>
+<p align="center"><img src="./images/image04.png"/></p>
+<p align="center"><img src="./images/image05.png"/></p>
 
 컬렉션 프레임워크 자체는 이 45개 클래스를 공개하지 않기 때문에 API 외견을 훨씬 작게 만들 수 있었다. API가 작아진 것은 물론 개념적인 무게, 프로그래머가 API를 사용하기 위해 익혀야 하는 개념의 수와 난이도도 낮아졌다.
 
@@ -49,7 +49,7 @@
 
 반환 타입의 하위타입이기만 하면 어떤 클래스의 객체를 반환하던 상관없다. 심지어 다음 릴리즈에서는 또 다른 클래스의 객체를 반환해도 된다. 즉 하위 타입이기만 하면 API 변경 시 또 다른 클래스의 객체를 반환해도 된다. 예를들어 EnumSet 클래스는 public 생성자 없이 정적 팩토리만 제공하는데 openjdk에서는 원소의 수에 따라 두 가지 하위 클래스중 하나의 인스턴스를 반환한다.
 
-<p align="center"><img src="../images/image06.png"/></p>
+<p align="center"><img src="./images/image06.png"/></p>
 
 반환 값을 보면 원소가 64개 이하면 long변수 하나로 원소를 관리하는 RegularEnumSet을, 65개 이상이면 long 배열로 관리하는 JumboEnumSet을 반환한다. 만약 원소가 적을 때 RegularEnumSet을 사용할 이점이 없어진다면 다음 릴리즈에는 이를 삭제해도 클라이언트는 아무런 변화도 알 수 없을 것이다.  클라이언트는 팩토리가 건네주는 객체가 어느 클래스의 인스턴스인지 알 수 없고 알 필요도 없다. EnumSet의 하위 클래스이기만 하면 된다.
 
