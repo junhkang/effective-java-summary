@@ -14,4 +14,4 @@ Effective Java (by Joshua Bloch) 내용 및 예제 정리
 
 
 ### 블로그
-[junhkang의 개발 블로그] (https://junhkang.tistory.com/)
+[junhkang의 개발 블로그](https://junhkang.tistory.com)
