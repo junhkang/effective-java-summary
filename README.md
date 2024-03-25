@@ -14,6 +14,8 @@ Effective Java (by Joshua Bloch) 내용 및 예제 정리
 
 [04. 인스턴스화를 막으려거든 private 생성자를 사용하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item04/concept.md)
 
+[05. 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item05/concept.md)
+
 
 ### 블로그
 [junhkang의 개발 블로그](https://junhkang.tistory.com)
