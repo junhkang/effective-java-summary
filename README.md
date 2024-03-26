@@ -16,6 +16,8 @@ Effective Java (by Joshua Bloch) 내용 및 예제 정리
 
 [05. 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item05/concept.md)
 
+[06. 불필요한 객체 생성을 피하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item06/concept.md)
+
 
 ### 블로그
 [junhkang의 개발 블로그](https://junhkang.tistory.com)
