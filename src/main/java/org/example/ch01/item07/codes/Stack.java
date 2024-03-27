@@ -22,6 +22,13 @@ public class Stack {
             throw new EmptyStackException();
         return elements[--size];
     }
+    public Object customPop() {
+        if (size == 0)
+            throw new EmptyStackException();
+        Object result =  elements[--size];
+        elements[size] = null;
+        return result;
+    }
 
     private void ensureCapacity()   {
         if (elements.length == size)
