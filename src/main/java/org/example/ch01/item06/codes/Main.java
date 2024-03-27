@@ -1,9 +1,5 @@
 package org.example.ch01.item06.codes;
 
-import org.example.ch01.item03.codes.ElvisField;
-
-import java.lang.reflect.Constructor;
-
 public class Main {
 
     public static void main(String[] args) {

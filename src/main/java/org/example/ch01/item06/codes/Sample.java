@@ -1,8 +1,5 @@
 package org.example.ch01.item06.codes;
 
-import java.util.List;
-import java.util.function.Supplier;
-
 public class Sample {
     static boolean isRomanNumeral(String s) {
         return s.matches("^(>=.)M*(C[MD]|D?C{0,3})"
