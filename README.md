@@ -20,6 +20,8 @@ Effective Java (by Joshua Bloch) 내용 및 예제 정리
 
 [07. 다 쓴 객체 참조를 해제하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item07/concept.md)
 
+[08. finalizer 와 cleaner 사용을 피하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item08/concept.md)
+
 
 ### 블로그
 [junhkang의 개발 블로그](https://junhkang.tistory.com)
