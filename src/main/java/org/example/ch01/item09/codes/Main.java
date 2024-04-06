@@ -31,14 +31,14 @@ public class Main {
         }
     }
 
-    static String firstLineOfFile(String path) throws IOException {
+    static String firstLineOfFile2(String path) throws IOException {
         try (BufferedReader br = new BufferedReader(
                 new FileReader(path))) {
             return br.readLine();
         }
     }
 
-    static void copy(String src, String dst) throws IOException {
+    static void copy2(String src, String dst) throws IOException {
         try (InputStream in = new FileInputStream(src);
              OutputStream out = new FileOutputStream(dst)) {
             byte[] buf = new byte[BUFFER_SIZE];
@@ -48,7 +48,7 @@ public class Main {
         }
     }
 
-    static String firstLineOfFile(String path, String defaultVal) {
+    static String firstLineOfFile3(String path, String defaultVal) {
         try (BufferedReader br = new BufferedReader(
                 new FileReader(path))) {
             return br.readLine();
