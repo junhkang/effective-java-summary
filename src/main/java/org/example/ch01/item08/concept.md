@@ -1,3 +1,5 @@
+# 08. finalizer 와 cleaner 사용을 피하라
+
 ## 1\. finalizer와 cleaner란?
 
 finalizer와 cleaner는 자바의 2가지 객체 소멸자이다. finalizer는 **Object.finalize()** 메서드를 오버라이딩 함으로써 사용된다. 작동 여부 및 시점을 예측할 수 없고 상황에 따라 위험할 수 있어 일반적으로 불필요하며, 기능의 잘못된 동작, 낮은 성능, 이식성 문제의 원인이 되기도 한다. 기본적으로는 사용하면 안 되고, 자바 9에서는 finalizer를 deprecated API로 지정하고, **java.lang.ref.Cleaner** 클래스를 사용하여 구현된 cleaner를 대안으로 제시하였으나, cleaner 또한 finalizer보다는 덜 위험 하지만 여전히 예측불가하고 성능이 좋지 않아 일반적으로 불필요하다. 
