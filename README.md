@@ -22,6 +22,8 @@ Effective Java (by Joshua Bloch) 내용 및 예제 정리
 
 [08. finalizer 와 cleaner 사용을 피하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item08/concept.md)
 
+[09. try-finally 보다는 try-with-resources를 사용하라](https://github.com/junhkang/effective-java-summary/blob/master/src/main/java/org/example/ch01/item09/concept.md)
+
 
 ### 블로그
 [junhkang의 개발 블로그](https://junhkang.tistory.com)
